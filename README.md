@@ -31,6 +31,8 @@ Key scenarios:
 | Async | async/await, CancellationToken |
 | UI timer | DispatcherTimer (500 ms tick) |
 | Serialization | System.Text.Json |
+
+ Note: The project is built on .NET Framework 4.7+ as a desktop solution. I am currently migrating my skills to .NET 8 / ASP.NET Core for web development.
  
 ---
  

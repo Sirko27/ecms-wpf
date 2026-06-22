@@ -54,8 +54,7 @@ The project implements 7 GoF design patterns:
  
 **Command** — `RelayCommand` implements `ICommand` to bind UI buttons to ViewModel methods without code-behind.
 
-
-**Diagram**
+### Diagram
 
 - **Use Case Diagram** — system functionality from operator's perspective.
 - **Sequence Diagram** — interaction flow (State, Memento, Observer).

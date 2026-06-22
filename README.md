@@ -53,10 +53,9 @@ The project implements 7 GoF design patterns:
 **Singleton** — `EventLogger.Instance` is the single point of entry for all event logging.
  
 **Command** — `RelayCommand` implements `ICommand` to bind UI buttons to ViewModel methods without code-behind.
+
  
----
- 
-## Project structure
+**Diagrams:**
  
 ```
 ECMS/

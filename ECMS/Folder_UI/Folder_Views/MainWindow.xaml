@@ -1,0 +1,195 @@
+﻿<Window x:Class="ECMS.Folder_UI.Folder_Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ECMS.Folder_UI.Folder_Views"
+        xmlns:vm="clr-namespace:ECMS.Folder_UI.Folder_ViewModels"
+        mc:Ignorable="d"
+        Title="ECMS - Система керування обладнанням" Height="600" Width="1200" WindowStartupLocation="CenterScreen">
+
+    <Window.InputBindings>
+        <KeyBinding Key="Z" Modifiers="Ctrl" Command="{Binding UndoCommand}"/>
+        <KeyBinding Key="Z" Modifiers="Ctrl+Shift" Command="{Binding RedoCommand}"/>
+    </Window.InputBindings>
+
+    <Window.Resources>
+        <!-- Ресурси для стилів та шаблонів-->
+        <!-- Конвертер bool колір для помпи -->
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+
+        <!--макет для двигуна-->
+        <DataTemplate DataType="{x:Type vm:MotorViewModel}">
+            <Border BorderBrush="DodgerBlue" BorderThickness="1.5" CornerRadius="6" Margin="3" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="12"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Ellipse Width="10" Height="10" VerticalAlignment="Top" Margin="0,3,0,0">
+                        <Ellipse.Style>
+                            <Style TargetType="Ellipse">
+                                <Setter Property="Fill" Value="Gray"/>
+                                <Style.Triggers>
+
+                                    <DataTrigger Binding="{Binding State}" Value="Running">
+                                        <Setter Property="Fill" Value="Green"/>
+                                    </DataTrigger>
+
+                                    <DataTrigger Binding="{Binding State}" Value="Starting">
+                                        <Setter Property="Fill" Value="Goldenrod"/>
+                                    </DataTrigger>
+
+                                    <DataTrigger Binding="{Binding State}" Value="Stopping">
+                                        <Setter Property="Fill" Value="Goldenrod"/>
+                                    </DataTrigger>
+
+                                    <DataTrigger Binding="{Binding State}" Value="Fault">
+                                        <Setter Property="Fill" Value="Red"/>
+                                    </DataTrigger>
+
+                                    <DataTrigger Binding="{Binding State}" Value="Stopped">
+                                        <Setter Property="Fill" Value="Gray"/>
+                                    </DataTrigger>
+
+                                    <DataTrigger Binding="{Binding State}" Value="Needs Restart">
+                                        <Setter Property="Fill" Value="Purple"/>
+                                    </DataTrigger>
+
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                    </Ellipse>
+
+                    <StackPanel Grid.Column="1" Margin="8,0,0,0">
+
+                        <TextBlock FontWeight="Bold" FontSize="13">
+                            <Run Text="⚙ "/>
+                            <Run Text="{Binding Name}"/>
+                        </TextBlock>
+
+                        <TextBlock >
+                            <Run Text="Стан: "/>
+                            <Run Text="{Binding State, Mode=OneWay}"/>
+                        </TextBlock>
+
+                        <TextBlock>
+                            <Run Text="Швидкість: "/>
+                            <Run Text="{Binding Speed, Mode=OneWay}"/>
+                            <Run Text="/"/>
+                            <Run Text="{Binding MaxSpeed}"/>
+                        </TextBlock>
+
+                        <TextBlock>
+                            <Run Text="Температура: "/>
+                            <Run Text="{Binding Temperature, Mode=OneWay}"/>
+                            <Run Text="°C"/>
+                        </TextBlock>
+
+                        <TextBlock Foreground="Tomato" FontSize="10" FontWeight="Bold" Text="ВИСОКА ТЕМПЕРАТУРА">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsWarning}" Value="True">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+
+                        <TextBlock Foreground="Purple" FontSize="10" FontStyle="Italic" Text="Застосуйте налаштування: зупиніть або перезапустіть">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding NeedsRestart}" Value="True">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </DataTemplate>
+
+        <!--макет для помпи-->
+        <DataTemplate DataType="{x:Type vm:PumpViewModel}">
+            <Border BorderBrush="MediumTurquoise" BorderThickness="1.5" CornerRadius="6" Margin="3" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="12"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Ellipse Width="10" Height="10" VerticalAlignment="Top" Margin="0,3,0,0">
+                        <Ellipse.Style>
+                            <Style TargetType="Ellipse">
+                                <Setter Property="Fill" Value="Gray"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsActive}" Value="True">
+                                        <Setter Property="Fill" Value="Green"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                    </Ellipse>
+
+                    <StackPanel Grid.Column="1" Margin="8,0,0,0">
+                        <TextBlock FontWeight="Bold" FontSize="13">
+                            <Run Text="💧 "/>
+                            <Run Text="{Binding Name}"/>
+                        </TextBlock>
+                        <TextBlock>
+                            <Run Text="Статус: "/>
+                            <Run Text="{Binding State, Mode=OneWay}"/>
+                        </TextBlock>
+                        <TextBlock>
+                            <Run Text="Макс. швидкість: "/>
+                            <Run Text="{Binding MaxSpeed}"/>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+
+        <ListBox ItemsSource="{Binding Devices}" SelectedItem="{Binding SelectedDevice}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+
+        <!--кнопки для керування та налаштувань-->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,8">
+            <Button Content="Додати мотор" Command="{Binding AddMotorCommand}" Margin="4" Padding="8,4"/>
+            <Button Content="Додати помпу" Command="{Binding AddPumpCommand}" Margin="4" Padding="8,4"/>
+
+            <Separator Width="1" Background="LightGray" Margin="4,0"/>
+            <Button Content="Запустити" Command="{Binding StartCommand}" Margin="4" Padding="8,4"/>
+            <Button Content="Зупинити" Command="{Binding StopCommand}" Margin="4" Padding="8,4"/>
+            <Button Content="Перезапустити" Command="{Binding ResetCommand}" Margin="4" Padding="8,4"/>
+            <Button Content="Прив'язати двигун" Command="{Binding LinkPumpCommand}" Margin="4" Padding="8,4"/>
+            <Button Content="Відв'язати двигун" Command="{Binding UnlinkPumpCommand}" Margin="4" Padding="8,4"/>
+
+            <Separator Width="1" Background="LightGray" Margin="4,0"/>
+            <Button Content="Налаштування" Command="{Binding OpenSettingsCommand}" Margin="4" Padding="8,4"/>
+            <Button Content="Видалити" Command="{Binding RemoveCommand}" Margin="4" Padding="8,4" Foreground="Red"/>
+
+            <Separator Width="1" Background="LightGray" Margin="4,0"/>
+            <Button Content="Зберегти" Command="{Binding SaveConfigCommand}"   Margin="4" Padding="8,4"/>
+            <Button Content="Завантажити" Command="{Binding LoadConfigCommand}" Margin="4" Padding="8,4"/>
+        </StackPanel>
+
+        <GroupBox Grid.Row="2" Header="Журнал подій" Margin="0,4,0,0">
+            <ListBox ItemsSource="{Binding LogEntries}" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Consolas" FontSize="11" Background="Black" Foreground="LightGray" Name="ListLog"/>
+        </GroupBox>
+    </Grid>
+</Window>

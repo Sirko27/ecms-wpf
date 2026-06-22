@@ -97,8 +97,7 @@ ECMS/
  
 ## Screenshots
  
-<!-- Add screenshots after first launch: Win+Shift+S, save to docs/screenshots/ -->
-_Screenshots coming soon._
+![ait Text](https://drive.google.com/file/d/1ysrjFy8G4F0gVmEKL4j1XNFmt1OpKPFz/view?usp=sharing)
  
 ---
  

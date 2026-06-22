@@ -1,6 +1,0 @@
-C:\Users\romsm\OneDrive\Рабочий стол\кол\КПЗ\Лаб 1. Реалізація Абстрактної фабрики\lr1\AFactory\bin\Debug\AFactory.dll
-C:\Users\romsm\OneDrive\Рабочий стол\кол\КПЗ\Лаб 1. Реалізація Абстрактної фабрики\lr1\AFactory\bin\Debug\AFactory.pdb
-C:\Users\romsm\OneDrive\Рабочий стол\кол\КПЗ\Лаб 1. Реалізація Абстрактної фабрики\lr1\AFactory\obj\Debug\AFactory.csproj.AssemblyReference.cache
-C:\Users\romsm\OneDrive\Рабочий стол\кол\КПЗ\Лаб 1. Реалізація Абстрактної фабрики\lr1\AFactory\obj\Debug\AFactory.csproj.CoreCompileInputs.cache
-C:\Users\romsm\OneDrive\Рабочий стол\кол\КПЗ\Лаб 1. Реалізація Абстрактної фабрики\lr1\AFactory\obj\Debug\AFactory.dll
-C:\Users\romsm\OneDrive\Рабочий стол\кол\КПЗ\Лаб 1. Реалізація Абстрактної фабрики\lr1\AFactory\obj\Debug\AFactory.pdb

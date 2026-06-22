@@ -97,7 +97,10 @@ ECMS/
  
 ## Screenshots
  
-![ait Text](https://drive.google.com/file/d/1ysrjFy8G4F0gVmEKL4j1XNFmt1OpKPFz/view?usp=sharing)
+![Main Window](docs/screenshots/main.png)
+![Create System](docs/screenshots/main1.png)
+![Setting Window](docs/screenshots/Setting_motor.png)
+![Link Pump Window](docs/screenshots/link_pump.png)
  
 ---
  

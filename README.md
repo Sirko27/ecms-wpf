@@ -89,8 +89,11 @@ ECMS/
 - **Algorithm Flowchart** — decision-making process for thermal monitoring.
 
 ![Use Case](docs/screenshots/Use_case.png)
+
 ![Sequence System](docs/screenshots/Sequence_Diagram.png)
+
 ![Algorithm Flowchart](docs/screenshots/Algorithm_Flowchart.png)
+
 
 ---
  

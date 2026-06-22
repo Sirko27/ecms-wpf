@@ -1,6 +1,0 @@
-C:\Users\romsm\OneDrive\Рабочий стол\кол\КПЗ\Лаб 2. Реалізація патерну Фабричний метод\lr2\Factory_Method\bin\Debug\Factory_Method.dll
-C:\Users\romsm\OneDrive\Рабочий стол\кол\КПЗ\Лаб 2. Реалізація патерну Фабричний метод\lr2\Factory_Method\bin\Debug\Factory_Method.pdb
-C:\Users\romsm\OneDrive\Рабочий стол\кол\КПЗ\Лаб 2. Реалізація патерну Фабричний метод\lr2\Factory_Method\obj\Debug\Factory_Method.csproj.AssemblyReference.cache
-C:\Users\romsm\OneDrive\Рабочий стол\кол\КПЗ\Лаб 2. Реалізація патерну Фабричний метод\lr2\Factory_Method\obj\Debug\Factory_Method.csproj.CoreCompileInputs.cache
-C:\Users\romsm\OneDrive\Рабочий стол\кол\КПЗ\Лаб 2. Реалізація патерну Фабричний метод\lr2\Factory_Method\obj\Debug\Factory_Method.dll
-C:\Users\romsm\OneDrive\Рабочий стол\кол\КПЗ\Лаб 2. Реалізація патерну Фабричний метод\lr2\Factory_Method\obj\Debug\Factory_Method.pdb

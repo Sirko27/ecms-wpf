@@ -80,7 +80,18 @@ ECMS/
         ├── Folder_ViewModels/    # MainViewModel, MotorViewModel, PumpViewModel...
         └── Folder_Views/         # MainWindow, SettingWindow, LinkPumpWindow (XAML)
 ```
+  
+---
  
+## Architecture & Design
+- **Use Case Diagram** — system functionality from operator's perspective.
+- **Sequence Diagram** — interaction flow (State, Memento, Observer).
+- **Algorithm Flowchart** — decision-making process for thermal monitoring.
+
+![Use Case](docs/screenshots/Use_case.png)
+![Sequence System](docs/screenshots/Sequence_Diagram.png)
+![Algorithm Flowchart](docs/screenshots/Algorithm_Flowchart.png)
+
 ---
  
 ## Getting started

@@ -54,8 +54,23 @@ The project implements 7 GoF design patterns:
  
 **Command** — `RelayCommand` implements `ICommand` to bind UI buttons to ViewModel methods without code-behind.
 
+
+**Diagram**
+
+- **Use Case Diagram** — system functionality from operator's perspective.
+- **Sequence Diagram** — interaction flow (State, Memento, Observer).
+- **Algorithm Flowchart** — decision-making process for thermal monitoring.
+
+![Use Case](docs/screenshots/Use_case.png)
+
+![Sequence System](docs/screenshots/Sequence_Diagram.png)
+
+![Algorithm Flowchart](docs/screenshots/Algorithm_Flowchart.png)
+
+
+---
  
-**Diagrams:**
+## Project structure
  
 ```
 ECMS/
@@ -80,20 +95,6 @@ ECMS/
         └── Folder_Views/         # MainWindow, SettingWindow, LinkPumpWindow (XAML)
 ```
   
----
- 
-## Architecture & Design
-- **Use Case Diagram** — system functionality from operator's perspective.
-- **Sequence Diagram** — interaction flow (State, Memento, Observer).
-- **Algorithm Flowchart** — decision-making process for thermal monitoring.
-
-![Use Case](docs/screenshots/Use_case.png)
-
-![Sequence System](docs/screenshots/Sequence_Diagram.png)
-
-![Algorithm Flowchart](docs/screenshots/Algorithm_Flowchart.png)
-
-
 ---
  
 ## Getting started

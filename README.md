@@ -87,7 +87,7 @@ ECMS/
  
 1. Clone the repository:
 ```bash
-   git clone https://github.com/YOUR_USERNAME/ecms-wpf.git
+   git clone https://github.com/Sirko27/ecms-wpf.git
 ```
 2. Open `ECMS/ECMS.sln` in Visual Studio.
 3. Press **F5** — NuGet packages will restore automatically.

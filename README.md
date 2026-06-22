@@ -17,7 +17,7 @@ Key scenarios:
  
 - A motor heats up while running (proportional to speed). When temperature reaches the **Warning** threshold (180 °C) the event is logged. At the **Alarm** threshold (200 °C) the motor stops automatically and transitions to the **Fault** state.
 - Linked pumps cool the motor — each additional pump is less effective (damping factor 0.5).
-- Changing `MaxSpeed` while the motor is running transitions it to **Needs Restart**, after which it restarts automatically with the new settings.
+- Changing `MaxSpeed` while the motor is running transitions it to **Needs Restart**.
 - All events (Warning, Alarm, start/stop) are recorded in the event log with a timestamp.
 ---
  
